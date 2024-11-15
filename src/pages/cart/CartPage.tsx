@@ -79,11 +79,23 @@ const CartPage = () => {
             clearCart();
           }
         }}
-        style={{ backgroundColor: "red" }}
+        style={{ backgroundColor: "red", color: "white" }}
       >
         Clear Cart
       </Button>
-      <Button onClick={handleCheckout}>Checkout</Button>
+      <Button
+        onClick={handleCheckout}
+        sx={{
+          backgroundColor: "var(--button-bg-color)",
+          color: "var(--button-text-color)",
+          padding: "0.5em 1em",
+          cursor: "pointer",
+          margin: "5px",
+          fontWeight: "bold",
+        }}
+      >
+        Checkout
+      </Button>
     </Box>
   );
 };

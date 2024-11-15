@@ -15,7 +15,8 @@
   }
   
   .receipt-card {
-    background-color: var(--card-bg-color);
+    background-color: var(--text-bg-color);
+    color: var(--text-form-color);
     padding: 15px;
     border-radius: 8px;
     max-width: 320px;
@@ -37,9 +38,9 @@
   }
   
   .receipt-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
     padding: 10px 0;
     border-bottom: 1px solid var(--text-color-light);
   }
@@ -68,4 +69,16 @@
   .clear-receipts-button:hover {
     opacity: 0.9;
   }
-  
+  h3 {
+    color: var(  --button-bg-color) !important;
+    margin: 0.5em 0;
+    font-weight: bolder !important;
+  font-family:'Times New Roman', Times, serif !important;
+  }
+
+  h6 {
+    color: var(--text-form-color) !important;
+    margin: 0.5em 0;
+    font-weight: bolder !important;
+  font-family:'Times New Roman', Times, serif !important;
+  }

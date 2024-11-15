@@ -14,14 +14,9 @@ const ReceiptsPage: React.FC = () => {
 
   return (
     <Box className="receipts-page">
-      <Typography variant="h3">Receipts</Typography>
-      <Button
-        onClick={clearReceipts}
-        className="clear-receipts-button"
-        style={{ backgroundColor: "red" }}
-      >
-        Clear All Receipts
-      </Button>
+      <Typography variant="h3" style={{ margin: "30px" }}>
+        Receipts
+      </Typography>
       <Box className="receipts-container">
         {receipts &&
           receipts.map((receipt) => (
@@ -32,10 +27,11 @@ const ReceiptsPage: React.FC = () => {
               <List className="receipt-list">
                 {receipt.cart.map((product: Product) => (
                   <ListItem key={product.id} className="receipt-item">
-                    <p className="product-name">
-                      <strong>{product.title}</strong>
-                    </p>
-                    <p className="product-price">
+                    <p className="product-name">{product.title}</p>
+                    <p
+                      className="product-price"
+                      style={{ fontWeight: "bolder", textAlign: "right" }}
+                    >
                       Price: ${product.price.toFixed(2)}
                     </p>
                   </ListItem>
@@ -44,6 +40,13 @@ const ReceiptsPage: React.FC = () => {
             </Box>
           ))}
       </Box>
+      <Button
+        onClick={clearReceipts}
+        className="clear-receipts-button"
+        style={{ backgroundColor: "red", color: "white", marginTop: "30px" }}
+      >
+        Clear All Receipts
+      </Button>
     </Box>
   );
 };

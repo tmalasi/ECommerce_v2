@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router";
 import { CartContext } from "../../context/CartContext";
-import UpdateProductForm from "./UpdateProductForm";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import "./Details.css";
+import UpdateProductForm from "../../components/products/UpdateProductForm";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -58,7 +58,9 @@ const ProductDetails = () => {
       <img src={product.image} alt={product.title} />
       <Typography variant="h5">{product.title}</Typography>
       <p>{product.description}</p>
-      <p>Price: ${product.price}</p>
+      <p className="price" style={{ fontSize: "x-large" }}>
+        Price: ${product.price}
+      </p>
       <Box>
         <Button
           onClick={() => setQuantity(Math.max(quantity - 1, 0))}
@@ -84,7 +86,9 @@ const ProductDetails = () => {
       <Button onClick={() => updateCart && updateCart(product, quantity)}>
         {initialQuantity ? "Update Cart" : "Add to Cart"}
       </Button>
-
+      <Typography variant="h5" style={{ marginTop: "40px" }}>
+        Edit this product
+      </Typography>
       <UpdateProductForm
         onProductUpdate={editProduct}
         mode="Edit"
@@ -92,7 +96,7 @@ const ProductDetails = () => {
       />
       <Button
         onClick={deleteProduct}
-        style={{ marginTop: "10px", color: "red" }}
+        style={{ marginTop: "10px", backgroundColor: "red" }}
       >
         Delete Product
       </Button>

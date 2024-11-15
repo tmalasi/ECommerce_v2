@@ -4,8 +4,12 @@
   --card-bg-color: #f8f9fa;
   --button-bg-color: #81409b;
   --button-text-color: #ffffff;
-  --box-shadow-color: rgba(39, 37, 37, 0.669);
+  --box-shadow-color: rgba(39, 37, 37, 0.406);
   --nav-button-color: #61207a;
+  --form-bg-color: #f8f9fa;
+  --text-bg-color:#e0dbdb;
+  --text-form-color: #020202f1;
+  --price-color: #61207a;
 }
 
 .dark {
@@ -14,8 +18,12 @@
   --card-bg-color: #020202d6;
   --button-bg-color: #b680cb ;
   --button-text-color: #ffffff;
-  --box-shadow-color: rgba(255, 255, 255, 0.493);
+  --box-shadow-color: rgba(130, 126, 126, 0.313);
   --nav-button-color: #c39bd3 ;
+  --form-bg-color: #ae6ac9;
+  --text-bg-color:#e0dbdb;
+  --text-form-color: #020202ed;
+  --price-color: #61207a;
 }
 a {
   font-weight: 500;

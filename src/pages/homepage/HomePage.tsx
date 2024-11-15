@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import "./styles.css";
-import ProductCard from "../products/ProductCard";
 import useFetch from "../../hooks/UseFetch";
-import UpdateProductForm from "../products/UpdateProductForm";
 import { Product } from "../../interfaces/ProductInterface";
+import ProductCard from "../../components/products/ProductCard";
+import UpdateProductForm from "../../components/products/UpdateProductForm";
 
 const HomePage = () => {
   const { items, loading, error } = useFetch(
@@ -64,6 +64,9 @@ const HomePage = () => {
             ))}
           </Box>
         )}
+        <Typography variant="h4" style={{ padding: "20px", marginTop: "40px" }}>
+          Add a new product
+        </Typography>
         <UpdateProductForm onProductUpdate={addProduct} mode="Add" />
       </Box>
     </>

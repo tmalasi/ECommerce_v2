@@ -1,0 +1,167 @@
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.homepage {
+  background-color: var(--bg-color);
+}
+
+.desc {
+  font-size: 1.2em;
+  color: var(--text-color);
+  margin: 30px 0;
+  padding: 15px;
+  border-left: 5px solid var(--primary-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  line-height: 1.6;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.products-grid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  );
+  gap: 70px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.product-card {
+  padding: 1em;
+  border-radius: 8px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--button-bg-color);
+  box-shadow: 0 4px 6px var(--box-shadow-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+}
+
+.product-card p {
+  color: var(--text-color);
+  font-size: x-large;
+}
+
+.product-card .buttons-cart {
+  margin-top: auto;
+  width: 100%;
+}
+
+.product-card button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.custom-heading,
+h4 {
+  color: var(--text-color) !important;
+  margin: 0.5em 0;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.product-card .quantity-control {
+  margin: 1em 0;
+}
+
+img {
+  width: 220px;
+  height: 250px;
+}
+
+.form-handler {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--form-bg-color);
+  color: var(--text-color);
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px var(--box-shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-handler:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px var(--box-shadow-color);
+}
+
+.form-handler input,
+.form-handler textarea {
+  padding: 10px;
+  border: 1px solid var(--button-bg-color);
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: var(--text-bg-color);
+  color: var(--text-form-color);
+  transition: border-color 0.3s ease;
+}
+
+.form-handler input:focus,
+.form-handler textarea:focus {
+  outline: none;
+  border-color: var(--nav-button-color);
+  box-shadow: 0 0 8px var(--nav-button-color);
+}
+
+.form-handler button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-handler button:hover {
+  background-color: var(--nav-button-color);
+  transform: scale(1.05);
+}
+
+.form-handler button:active {
+  transform: scale(0.95);
+}
+
+.form-handler label {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.form-handler .form-error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .form-handler {
+    padding: 20px;
+    gap: 12px;
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+  }
+
+  .form-handler button {
+    font-size: 0.9em;
+    padding: 10px 16px;
+  }
+}

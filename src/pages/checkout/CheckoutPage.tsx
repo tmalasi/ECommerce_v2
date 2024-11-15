@@ -16,10 +16,29 @@ const CheckoutPage = () => {
         Your order has been successfully placed. We hope you enjoyed your
         purchase!
       </p>
-      <Button className="shop-more-button" onClick={() => navigate(`/`)}>
+      <Button
+        className="shop-more-button"
+        sx={{
+          backgroundColor: "var(--button-bg-color)",
+          color: "var(--button-text-color)",
+          padding: "0.5em 1em",
+          cursor: "pointer",
+          margin: "5px",
+          fontWeight: "bold",
+        }}
+        onClick={() => navigate(`/`)}
+      >
         Shop Some More
       </Button>
       <Button
+        sx={{
+          backgroundColor: "var(--button-bg-color)",
+          color: "var(--button-text-color)",
+          padding: "0.5em 1em",
+          cursor: "pointer",
+          margin: "5px",
+          fontWeight: "bold",
+        }}
         className="shop-more-button"
         onClick={() => navigate(`/receipts`)}
       >
